@@ -1,5 +1,7 @@
 # momento-2
 5.15
+![image](https://github.com/user-attachments/assets/756f86f4-fcc6-4cab-a366-37914dc36158)
+
 NUMERO = float(input("Ingrese el número 1: "))
 MAX = NUMERO
 MIN = NUMERO
@@ -12,8 +14,11 @@ for i in range(2, 101):
         MIN = NUMERO
 
 print(f"Máximo {MAX}, Mínimo {MIN}")
+![image](https://github.com/user-attachments/assets/700ffb8b-46e2-4e0a-88e2-0585b309a89d)
 
 5.16
+![image](https://github.com/user-attachments/assets/fbfe3f8f-ef45-4eb7-9c80-14b6d65473e2)
+
 N1 = int(input("Ingrese N1: "))
 N2 = int(input("Ingrese N2: "))
 
@@ -28,6 +33,8 @@ while N1 != 999 or N2 != 999:
     M = (N1 + N2) / 2
 
 5.17
+![image](https://github.com/user-attachments/assets/ed21652e-79df-42ef-8bb6-32966b0c8d13)
+
 SW = 0
 
 while SW == 0:
