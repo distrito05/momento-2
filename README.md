@@ -31,9 +31,13 @@ while N1 != 999 or N2 != 999:
     if N1 == 999 and N2 == 999:
         break
     M = (N1 + N2) / 2
+    if M > MAX:
+        MAX = M
+print(f"Media maxima = {MAX}")
+![image](https://github.com/user-attachments/assets/1aac9c7e-464e-40cd-a077-34e50256323c)
 
 5.17
-![image](https://github.com/user-attachments/assets/ed21652e-79df-42ef-8bb6-32966b0c8d13)
+![image](https://github.com/user-attachments/assets/2e180683-e1d8-440b-8591-12bfa99a155f)
 
 SW = 0
 
@@ -46,6 +50,7 @@ while SW == 0:
         SW = 1
     else:
         print(f"Correcto, {N} es entero")
+![image](https://github.com/user-attachments/assets/97aa52c5-1c5d-4166-a09f-5ba8fdf3b1a9)
 
 5.19
 
@@ -59,8 +64,50 @@ while nombre != '***':
     media = (BASIC + Pascal + FORTRAN) / 3
     print(nombre, media)
     nombre = input("Nombre del estudiante: ")
+![image](https://github.com/user-attachments/assets/e29ec179-daaf-4e55-b71b-e0b5001264a3)
 
 5.9
+Analicis: el codigo que nos pidieron para el desarrollo de este problema es posible secmentarlo en distintas partes para poder explicarlo, de manera que para dar con el importe por cantidad de articulos de cada categoria se va desarrollando la respuesta a medida que se van digitando los datos necesarios para el importe.
+así, y mediante el uso de la estructura repetitiva while, es posible seguir sumando el valor del importe por producto de cada categoria hasta que se digite la variable "X" encargada de cortar con el bucle y soltando el resultado deseado.
+
+Pseudocodigo:
+
+algoritmo registro_ventas
+var
+  entero: total_articulos_A, total_articulos_B, numero_articulos
+  real: total_importe_A, total_importe_B, precio_unitario
+  caracter: codigo_articulo
+
+inicio
+  total_articulos_A ← 0
+  total_articulos_B ← 0
+  total_importe_A ← 0
+  total_importe_B ← 0
+
+  mientras (verdadero) hacer
+    leer(codigo_articulo)
+    si codigo_articulo == "X" entonces
+      romper_mientras
+    fin_si
+    leer(precio_unitario)
+    leer(numero_articulos)
+    si codigo_articulo == "A" entonces
+      total_articulos_A ← total_articulos_A + numero_articulos
+      total_importe_A ← total_importe_A + precio_unitario * numero_articulos
+    sino si codigo_articulo == "B" entonces
+      total_articulos_B ← total_articulos_B + numero_articulos
+      total_importe_B ← total_importe_B + precio_unitario * numero_articulos
+    fin_si
+  fin_mientras
+
+  escribir("Número total de artículos tipo A: ", total_articulos_A)
+  escribir("Importe total de artículos tipo A: ", total_importe_A)
+  escribir("Número total de artículos tipo B: ", total_articulos_B)
+  escribir("Importe total de artículos tipo B: ", total_importe_B)
+fin
+
+Codigo en python:
+
 total_articulos_A = 0
 total_articulos_B = 0
 total_importe_A = 0
